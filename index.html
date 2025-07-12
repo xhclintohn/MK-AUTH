@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>M-KOPA Unlock Password</title>
+</head>
+<body>
+  <h1>Current Password: <span id="password">Loading...</span></h1>
+  <script>
+    fetch('/password.json')
+      .then(response => response.json())
+      .then(data => document.getElementById('password').innerText = data.password);
+  </script>
+</body>
+</html>
